@@ -1,8 +1,9 @@
 package model.user;
 
 import jakarta.persistence.*;
-import jdk.jfr.Registered;
 import lombok.*;
+import model.project.Project;
+import model.task.Task;
 
 @Entity
 @Table(name = "tb_user")
@@ -10,7 +11,6 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@RequiredArgsConstructor
 public class User {
 
     @Id
@@ -23,6 +23,9 @@ public class User {
 
     private UserRole userRole;
 
+    private Project project;
+
+    private Task assignedTask;
 }
 
 

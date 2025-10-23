@@ -9,7 +9,6 @@ import model.task.Task;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@RequiredArgsConstructor
 @Table(name = "tb_project")
 public class Project {
 
