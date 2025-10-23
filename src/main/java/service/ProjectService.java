@@ -16,10 +16,9 @@ public class ProjectService {
     }
 
     //encontrar projeto pelo id
-    public Project findById(Long id){
-        // 1. Tente buscar o projeto. findById retorna um Optional.
-        return projectRepository.findById(id)
-                .orElseThrow(() -> new NoSuchElementException("O projeto com id " + id + " não existe."));
+    public Project getById(Long id){
+            return projectRepository.findById(id)
+                    .orElseThrow(() -> new NoSuchElementException("Project not found with id: " + id));
     }
 
 

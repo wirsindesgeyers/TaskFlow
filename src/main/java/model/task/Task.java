@@ -8,7 +8,6 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@RequiredArgsConstructor
 @Table(name = "tb_task")
 public class Task {
 
@@ -16,10 +15,13 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Boolean progressionStatus;
+    @Enumerated(EnumType.STRING)
+    private ProgressionStatus progressionStatus;
 
     private String title;
 
     private String description;
+
+    private String attributedTo;
 
 }
